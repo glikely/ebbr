@@ -47,3 +47,10 @@ deploy:
   skip_cleanup: true
   on:
     branch: master
+- provider: pages
+  github_token: "$GITHUB_TOKEN"
+  local_dir: build/singlehtml
+  skip_cleanup: true
+  repo: arm-software/ebbr
+  on:
+    branch: released
